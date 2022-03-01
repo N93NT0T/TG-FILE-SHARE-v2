@@ -31,15 +31,15 @@
     },
     "FORCE_SUB_CHANNEL":{
       "description": "id of the channel or group, if you want enable force sub feature else put 0",
-      "value": "0"
+      "value": "-100"
     },
     "START_MESSAGE": {
       "description": "Optional: start message of bot, use HTML parsemode format",
       "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
     },
-    "FORCE_SUB_MESSAGE": {
+    "CUSTOM_CAPTION": {
       "description": "Optional: Force Sub message of bot, use HTML parsemode format",
-      "value": "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+      "value": "<b> Thank You {first} </b>"
     },
     "DATABASE_URI": {
       "description": "Optional: Force Sub message of bot, use HTML parsemode format",
