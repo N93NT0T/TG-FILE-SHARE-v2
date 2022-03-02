@@ -30,7 +30,7 @@ async def channel_post(client: Client, message: Message):
 
 
     reply_markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
+        InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
         ],[
         InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
@@ -55,7 +55,7 @@ async def new_post(client: Client, message: Message):
     bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
 
      reply_markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
+        InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
         ],[
         InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
