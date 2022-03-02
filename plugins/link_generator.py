@@ -43,8 +43,6 @@ async def batch(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
-        ],[
-        InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
     ]])
     await second_message.reply_text(f"<b>Here is your link</b>\n\n{link}", quote=True, reply_markup=reply_markup)
 
@@ -72,7 +70,5 @@ async def link_generator(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
-        ],[
-        InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
     ]])
     await channel_message.reply_text(f"<b>Here is your link</b>\n\n{link}", quote=True, reply_markup=reply_markup)
