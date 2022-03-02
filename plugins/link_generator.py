@@ -37,7 +37,7 @@ async def batch(client: Client, message: Message):
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
     share_url = f"https://telegram.me/share/url?url={link}"
-    bypass = https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
+    bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
     buttons = [[
         InlineKeyboardButton(text="Open Url 🔗", url=url),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
@@ -66,7 +66,7 @@ async def link_generator(client: Client, message: Message):
     base64_string = await encode(f"get-{msg_id * abs(client.db_channel.id)}")
     link = f"https://t.me/{client.username}?start={base64_string}"
     share_url = f"https://telegram.me/share/url?url={link}"
-    bypass = https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
+    bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
     buttons = [[
         InlineKeyboardButton(text="Open Url 🔗", url=url),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
