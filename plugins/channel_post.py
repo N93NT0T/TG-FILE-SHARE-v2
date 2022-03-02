@@ -25,14 +25,8 @@ async def channel_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
-    share_url = f"https://telegram.me/share/url?url={link}"
-    bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
 
-
-    reply_markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton(text="Open Url 🔗", url=link),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
-    ]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
 
     await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
 
@@ -49,14 +43,7 @@ async def new_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
-    share_url = f"https://telegram.me/share/url?url={link}"
-    bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
-
-     reply_markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton(text="Open Url 🔗", url=link),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
-    ]])
-
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     try:
         await message.edit_reply_markup(reply_markup)
     except Exception as e:
