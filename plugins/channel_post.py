@@ -32,8 +32,6 @@ async def channel_post(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
-        ],[
-        InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
     ]])
 
     await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
@@ -57,8 +55,6 @@ async def new_post(client: Client, message: Message):
      reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=link),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
-        ],[
-        InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
     ]])
 
     try:
