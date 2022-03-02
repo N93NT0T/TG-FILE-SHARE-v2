@@ -38,14 +38,14 @@ async def batch(client: Client, message: Message):
     link = f"https://t.me/{client.username}?start={base64_string}"
     share_url = f"https://telegram.me/share/url?url={link}"
     bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
-    buttons = [[
+    
+
+    reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=url),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
         ],[
         InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
-    ]]
-
-    reply_markup = InlineKeyboardMarkup(buttons)
+    ]])
     await second_message.reply_text(f"<b>Here is your link</b>\n\n{link}", quote=True, reply_markup=reply_markup)
 
 
@@ -67,12 +67,12 @@ async def link_generator(client: Client, message: Message):
     link = f"https://t.me/{client.username}?start={base64_string}"
     share_url = f"https://telegram.me/share/url?url={link}"
     bypass = f"https://paid4link.com/st?api=1e9711a33a570ec6ae50cec905a7c8c8822cdb1a&url={link}"
-    buttons = [[
+    
+
+    reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(text="Open Url 🔗", url=url),
         InlineKeyboardButton(text="Share Link 👤", url=share_url)
         ],[
         InlineKeyboardButton(text="Bypass Shortlink 🔐", url=bypass)
-    ]]
-
-    reply_markup = InlineKeyboardMarkup(buttons)
+    ]])
     await channel_message.reply_text(f"<b>Here is your link</b>\n\n{link}", quote=True, reply_markup=reply_markup)
